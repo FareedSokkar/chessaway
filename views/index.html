@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Find the Way</h1>
+        <h2>[Chess Game!]</h2>
+    </div>
+    <div class="options">
+        <form action="/startgame" method="get">
+            <table>
+                <tr>
+                    <td class="label">Board Size</td>
+                    <td class="select">
+                        <input type="number" placeholder="height (default 8)" name="height" id="height" min="2" max="10" value="8">
+                        <input type="number" placeholder="width (default 8)" name="width" id="width" min="2" max="10" value="8">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Chess Piece</td>
+                    <td class="select">
+                        <select name="piece" id="piece" onchange="pieceTypeSelect(this.value)">
+                            <option value="King">King</option>
+                            <option value="Queen">Queen</option>
+                            <option value="Rook">Rook</option>
+                            <option value="Bishop">Bishop</option>
+                            <option value="Knight" selected>Knight</option>
+                            <option value="Pawn">Pawn</option>
+                        </select>
+                        <select name="color" id="color" onchange="pieceColorSelect(this.value)">
+                            <option value="B" selected>Black</option>
+                            <option value="W">White</option>
+                        </select>
+                    </td>
+                    <td><span id="piece_Val">&#9822;</span></td>
+                </tr>
+                <tr>
+                    <td class="button">
+                        <input type="submit" value="Start">
+                    </td>
+                    <td class="button">
+                        <input type="button" value="Reset" onclick="resetAllSettings()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="footer"></div>
+</body>
+<script src="js/init.js"></script>
+
+</html>

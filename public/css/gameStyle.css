@@ -1,0 +1,73 @@
+body * {
+    font-family: 'Sansita Swashed', cursive;
+    text-align: center;
+}
+
+body{
+    background: #0bab8b;
+}
+
+header {
+    padding: 1px;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+}
+
+input[type=submit]{
+    font-size: 30px;
+    width: 100%;
+    background-color: #4fefcf;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: #2bcdad;
+}
+
+#board {
+    margin: 0 auto;
+}
+
+.whitePiece {
+    color: #888;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    white-space: 0;
+    padding: 0;
+    font-size: 70px;
+}
+
+.blackSquare:hover,
+.whiteSquare:hover {
+    background: #ccc;
+}
+
+.blackSquare {
+    background: #333;
+}
+
+.whiteSquare {
+    background: #fff;
+}
+
+.allowedSquare {
+    background: #5d1;
+}
+
+.game {
+    background: #0bab8b;
+    padding: 20px;
+}
+
+span[draggable]:hover {
+    cursor: move;
+}
